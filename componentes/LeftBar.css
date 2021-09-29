@@ -1,0 +1,17 @@
+#left{
+    background-color: #007AFF;
+    /* font-family: Roboto, Medium; */
+    color: #fff;
+    width: 12vh;
+    height: 100vh;
+    /* justify-content: center; */
+    padding-top: 2vh;
+    /* align-items: center; */
+    position: absolute;
+}
+
+.icon{
+    margin-bottom: 10vh;
+    margin-left: 1.5vh;
+    
+}

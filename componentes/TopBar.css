@@ -1,0 +1,12 @@
+#top{
+    background-color: #007AFF;
+    /* font-family: Roboto, Medium; */
+    color: #fff;
+    height: 10vh;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#myImg{
+    padding-left: 8vh;
+}
