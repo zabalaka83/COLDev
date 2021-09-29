@@ -1,0 +1,54 @@
+    .contenedor{     
+      margin-top:40px;     
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      width: 60%;
+      height: 200px;
+      margin: auto;
+      margin-top: 10%;
+    }
+    .navbar{
+      background-color: blue;
+    }
+    .side{
+      width: 20vh;
+      background-color: blue;
+      height:100vmax;
+      position:absolute;
+      
+    }
+
+     .formulario{
+        
+        background-color: #007aff;
+        margin:auto;
+        color:#FFFFFF;
+        padding:10px 0px 10px 0px;
+        text-align: left;
+        font-size: 16px;
+        border-radius:15px 15px 0px 0px ;
+      }  
+
+      .producto{
+          margin-top: 10%;
+      }
+
+      .detalle{
+        margin-top: 10%;
+    }
+    .iconoVentas{
+      margin-block-start: 5%;
+      margin-left: 12%;
+      width: 15vh;
+      
+    }
+    .icono{
+      margin-top: 20%;
+      position: relative;
+     margin-left: 12%;
+      width: 15vh;
+      
+    }
+
+    
+
+    

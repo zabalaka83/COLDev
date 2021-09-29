@@ -1,0 +1,148 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVCol</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./img/Logo Horizontal PNG.png" alt="" width="140" height="60">
+        
+      </a>
+    </div>
+  </nav>
+  <aside class="side">
+    <img class="iconoVentas" src="./img/Icono Ventas.png" alt="" >
+    <img class="icono"  src="./img/ícono roles.png" alt="">
+    <img class="icono"  src="./img/Icono Productos.png" alt="">
+    <img class="icono"  src="./img/Icono Admin.png" alt="">
+  </aside>
+  <div class="contenedor">
+    <div class="cliente">
+        <div class="formulario">
+            <h1>Cliente Venta</h1>
+        </div>
+        <form class="row g-3">
+            <div class="col-md-6">
+              <label for="inputName" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="inputNombre">
+            </div>
+            <div class="col-md-6">
+              <label for="inputApellido" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="inputApellido">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Direccion</label>
+              <input type="text" class="form-control" id="inputAddress" >
+            </div>
+            <div class="col-md-6">
+              <label for="inputEmail" class="form-label">E-Mail</label>
+              <input type="email" class="form-control" id="inputAddress2" >
+            </div>
+            <div class="col-md-6">
+                <label for="inputTel" class="form-label">Telefono</label>
+                <input type="tel" class="form-control" id="inputTelefono" >
+              </div>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">Ciudad</label>
+              <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-6">
+              <label for="inputDepartamento" class="form-label">Departamento</label>
+              <input type="text" id="inputDepartamento" class="form-control">
+                
+            </div>
+            
+            
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+          </form>
+
+    </div>
+
+    <div class="detalle">
+        <div class="formulario">
+            <h1>Detalle venta</h1>
+        </div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id_Producto</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Precio Unitario</th>
+                <th scope="col">Precio Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+               
+                <td>Camisa</td>
+                <td>3</td>
+                <td>10000</td>
+                <td>30000</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+               
+                <td>Jean</td>
+                <td>5</td>
+                <td>10000</td>
+                <td>50000</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                
+                <td>Polo</td>
+                <td>2</td>
+                <td>10000</td>
+                <td>20000</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Editar</button>
+          </div>
+
+    </div>
+
+
+    <div class="producto">
+        <div class="formulario">
+            <h1>Productos</h1>
+        </div>
+        <form class="row g-3">
+            <div class="col-md-6">
+              <label for="inputProducto" class="form-label">Producto</label>
+              <input type="text" class="form-control" id="inputProducto">
+            </div>
+            <div class="col-md-6">
+              <label for="inputCantidad" class="form-label">Cantidad</label>
+              <input type="number" class="form-control" id="inputCantidad">
+            </div>        
+            
+            
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Agregar</button>
+            </div>
+          </form>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+  </div>
+</body>
+
+</html>
