@@ -9,7 +9,7 @@ const LeftBar = () => {
     return (
         <aside id="left" className="">
 
-            <Link to='/app/roles'><FaTools className="icon" style={{ color: 'white' }} /></Link>
+            <Link to='/app/operario'><FaTools className="icon" style={{ color: 'white' }} /></Link>
 
             <Link to='/app/stock'><FaBoxes className="icon" style={{ color: 'white' }} /></Link>
 

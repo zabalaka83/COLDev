@@ -5,13 +5,6 @@ import { useHistory } from 'react-router-dom'
 import TablaVentas from './TablaVentas'
 
 const Ventas = ({user, venta, setVenta}) => {
-    /* const [dbVentas,setdbVentas]=useState([
-        {id:123,nombre:"camisa",cantidad:5,precio:10000},
-        {id:1223,nombre:"pantalo",cantidad:55,precio:160000},
-        {id:1253,nombre:"jean",cantidad:65,precio:100700},
-        {id:1253,nombre:"polo",cantidad:75,precio:190000}
-
-    ]) */
 
     const history = useHistory();
 
