@@ -32,7 +32,7 @@ function App() {
     <Router>
       <TopBar user={user} setUser={setUser}/>
       <Switch>
-        <Route exact path="/login">
+        <Route exact path="/">
           <Login user={user} setUser={setUser}/>
         </Route>
         <Route exact path="/app/ventas" /* component={Ventas} */>

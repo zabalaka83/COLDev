@@ -33,7 +33,7 @@ const TablaVentas = ({venta, setVenta}) => {
                     return (
                       // Hacer un componente  fila para mantener la informacion
                       <tr key={index}>
-                        <th value={item.Id_Venta}>{item.Id_Venta}</th>
+                        <th >{item.Id_Venta}</th>
                         <td>{item.Empleado}</td>
                         <td>{item.Cliente}</td>
                         <td>{item.Total}</td>

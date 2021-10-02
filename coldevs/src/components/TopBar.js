@@ -15,7 +15,7 @@ const TopBar = ({user, setUser}) => {
             nombre: '',
             rol: 0
         })
-        history.push('/login');
+        history.push('/');
     }
 
     return (
