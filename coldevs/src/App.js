@@ -9,6 +9,7 @@ import Roles from './Roles/Roles'
 import Operario from './Operarios/Operario'
 import Stock from './Stock/Stock'
 import Denegado from "./components/Denegado"
+import DetalleVenta from './Ventas/DetalleVenta'
 
 function App() {
 
@@ -16,6 +17,15 @@ function App() {
     Id_Empleado: 0,
     nombre: '',
     rol: 0
+  });
+
+  const [ venta, setVenta ] = useState({
+    Id_Venta: 0,
+    Empleado: '',
+    Cliente: '',
+    Estado: '',
+    Total: 0,
+    Productos: []
   });
 
   return (
@@ -27,7 +37,11 @@ function App() {
         </Route>
         <Route exact path="/app/ventas" /* component={Ventas} */>
           <LeftBar user={user}/>
-          <Ventas user={user}/>
+          <Ventas user={user} ventas={venta} setVenta={setVenta}/>
+        </Route>
+        <Route exact path="/app/ventas/detalles">
+          <LeftBar user={user}/>
+          <DetalleVenta user={user} ventas={venta} setVenta={setVenta}/>
         </Route>
         <Route exact path="/app/roles">
           <LeftBar user={user}/>

@@ -31,49 +31,187 @@ const DATABASE = {
            Empleado: 'Empleado_1',
            Cliente: 'Cliente_1',
            Estado: 'Abierta',
-           Total: 345345
+           Total: 345345,
+           Productos: [
+                {
+                    Id_Producto: 1,
+                    nombre: 'Camisa',
+                    cantidad: 3,
+                    precioUnidad: 10000,
+                    precioTotal: 30000
+                },
+                {
+                    Id_Producto: 2,
+                    nombre: 'Jeans',
+                    cantidad: 5,
+                    precioUnidad: 10000,
+                    precioTotal: 50000
+                },
+                {
+                    Id_Producto: 3,
+                    nombre: 'Polo',
+                    cantidad: 2,
+                    precioUnidad: 10000,
+                    precioTotal: 20000
+                },
+            ]
         },
         {
-            Id_Venta: 1,
+            Id_Venta: 2,
             Empleado: 'Empleado_2',
             Cliente: 'Cliente_3',
             Estado: 'Abierta',
-            Total: 345345
+            Total: 345345,
+            Productos: [
+                {
+                    Id_Producto: 1,
+                    nombre: 'Camisa',
+                    cantidad: 3,
+                    precioUnidad: 10000,
+                    precioTotal: 30000
+                },
+                {
+                    Id_Producto: 2,
+                    nombre: 'Jeans',
+                    cantidad: 5,
+                    precioUnidad: 10000,
+                    precioTotal: 50000
+                },
+                {
+                    Id_Producto: 3,
+                    nombre: 'Polo',
+                    cantidad: 2,
+                    precioUnidad: 10000,
+                    precioTotal: 20000
+                },
+            ]
          },
          {
-            Id_Venta: 1,
+            Id_Venta: 3,
             Empleado: 'Empleado_1',
             Cliente: 'Cliente_2',
             Estado: 'Abierta',
-            Total: 345345
+            Total: 345345,
+            Productos: [
+                {
+                    Id_Producto: 1,
+                    nombre: 'Camisa',
+                    cantidad: 3,
+                    precioUnidad: 10000,
+                    precioTotal: 30000
+                },
+                {
+                    Id_Producto: 2,
+                    nombre: 'Jeans',
+                    cantidad: 5,
+                    precioUnidad: 10000,
+                    precioTotal: 50000
+                },
+                {
+                    Id_Producto: 3,
+                    nombre: 'Polo',
+                    cantidad: 2,
+                    precioUnidad: 10000,
+                    precioTotal: 20000
+                },
+            ]
          },
          {
-            Id_Venta: 1,
+            Id_Venta: 4,
             Empleado: 'Empleado_3',
             Cliente: 'Cliente_5',
             Estado: 'Abierta',
-            Total: 345345
+            Total: 345345,
+            Productos: [
+                {
+                    Id_Producto: 1,
+                    nombre: 'Camisa',
+                    cantidad: 3,
+                    precioUnidad: 10000,
+                    precioTotal: 30000
+                },
+                {
+                    Id_Producto: 2,
+                    nombre: 'Jeans',
+                    cantidad: 5,
+                    precioUnidad: 10000,
+                    precioTotal: 50000
+                },
+                {
+                    Id_Producto: 3,
+                    nombre: 'Polo',
+                    cantidad: 2,
+                    precioUnidad: 10000,
+                    precioTotal: 20000
+                },
+            ]
          },
          {
-            Id_Venta: 1,
+            Id_Venta: 5,
             Empleado: 'Empleado_1',
             Cliente: 'Cliente_4',
             Estado: 'Abierta',
-            Total: 345345
+            Total: 345345,
+            Productos: [
+                {
+                    Id_Producto: 1,
+                    nombre: 'Camisa',
+                    cantidad: 3,
+                    precioUnidad: 10000,
+                    precioTotal: 30000
+                },
+                {
+                    Id_Producto: 2,
+                    nombre: 'Jeans',
+                    cantidad: 5,
+                    precioUnidad: 10000,
+                    precioTotal: 50000
+                },
+                {
+                    Id_Producto: 3,
+                    nombre: 'Polo',
+                    cantidad: 2,
+                    precioUnidad: 10000,
+                    precioTotal: 20000
+                },
+            ]
          },
          {
-            Id_Venta: 1,
+            Id_Venta: 6,
             Empleado: 'Empleado_3',
             Cliente: 'Cliente_8',
             Estado: 'Abierta',
-            Total: 345345
+            Total: 345345,
+            Productos: [
+                {
+                    Id_Producto: 1,
+                    nombre: 'Camisa',
+                    cantidad: 3,
+                    precioUnidad: 10000,
+                    precioTotal: 30000
+                },
+                {
+                    Id_Producto: 2,
+                    nombre: 'Jeans',
+                    cantidad: 5,
+                    precioUnidad: 10000,
+                    precioTotal: 50000
+                },
+                {
+                    Id_Producto: 3,
+                    nombre: 'Polo',
+                    cantidad: 2,
+                    precioUnidad: 10000,
+                    precioTotal: 20000
+                },
+            ]
          }
     ],
     productos: [
 
     ],
     pendientes: [
-
+        
     ]
 };
     

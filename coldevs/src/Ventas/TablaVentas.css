@@ -1,0 +1,9 @@
+.detail{
+    font-size: 3vh;
+}
+
+.detail :hover{
+    transition: 200ms;
+    color: #007AFF;
+    cursor: pointer;
+  }
