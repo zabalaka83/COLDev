@@ -1,5 +1,6 @@
 import React from 'react'
 import '../App.css'
+import './Roles.css'
 import { useHistory } from 'react-router-dom'
 
 const Roles = ({user, setUser}) => {

@@ -16,7 +16,10 @@ const TablaVentas = ({venta, setVenta}) => {
     }
 
     return (
-        <div>
+        <div className="detalle">
+            <div className="formulario">
+                <h1>Ventas</h1>
+            </div>
             <table className="table">
               <thead>
                 <tr>

@@ -1,7 +1,7 @@
 import React from 'react'
 import '../App.css'
+import './Operario.css'
 import { useHistory } from 'react-router-dom'
-import TablaVentas from './TablaVentas'
 import { FaCheckCircle } from "react-icons/fa";
 
 const Operario = ({ user }) => {

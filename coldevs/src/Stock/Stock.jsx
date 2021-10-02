@@ -1,5 +1,6 @@
 import React from 'react'
 import '../App.css'
+import './Stock.css'
 import { useHistory } from 'react-router-dom'
 import { MdAddCircle } from "react-icons/md";
 
@@ -13,7 +14,7 @@ const Stock = ({user}) => {
                 user.Id_Empleado === 0  ?
                 history.push('/denegado'):
                 <div className="main">
-                   <div >
+                   <div className="detalle">
                                 <div className="formulario">
                                     <h1>Productos En Stock</h1>                                                                 
                 
