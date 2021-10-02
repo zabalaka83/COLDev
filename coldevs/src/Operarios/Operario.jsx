@@ -1,6 +1,7 @@
 import React from 'react'
 import '../App.css'
 import { useHistory } from 'react-router-dom'
+import TablaVentas from './TablaVentas'
 
 const Operario = ({user}) => {
 
@@ -12,6 +13,7 @@ const Operario = ({user}) => {
                 user.Id_Empleado === 0  ?
                 history.push('/denegado'):
                 <div className="main">
+                    <TablaVentas />
                     <h1>Hello Operario...</h1>
                 </div>
             }

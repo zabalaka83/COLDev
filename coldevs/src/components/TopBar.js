@@ -11,8 +11,10 @@ const TopBar = ({user}) => {
             user.Id_Empleado !== 0 ? 
             <div id="top" className="d-flex justify-content-between">
                 <img id="myImg" src={LogoHorizontal} alt="Logo" height="60%"/>
-                <div id='name'>{user.nombre}</div>
-                <div id='salir'><Link to="" style={{color: 'white'}}><ImExit /></Link></div>
+                <div>
+                <div className="d-inline" id='name'>{user.nombre}</div>
+                <div className="d-inline" id='salir'><Link to="" style={{color: 'white'}}><ImExit /></Link></div>
+                </div>
             </div> : 
             <div id="top" className="d-flex justify-content-between">
                 <img id="myImg" src={LogoHorizontal} alt="Logo" height="60%"/>
