@@ -1,7 +1,7 @@
 import React from 'react';
 import './LeftBar.css';
 import { Link } from 'react-router-dom'
-import { ImStatsDots, ImUsers } from "react-icons/im";
+import { ImStatsDots } from "react-icons/im";
 import { FaBoxes, FaTools, FaUsers } from "react-icons/fa";
 
 const LeftBar = () => {

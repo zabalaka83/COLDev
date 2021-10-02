@@ -1,21 +1,27 @@
 const DATABASE = {
-    users: [
+    empleados: [
         {   
             Id_Empleado: 1,
             cedula: '123456',
             password: 'qwert',
+            nombre: 'Empleado_1',
+            direccion: 'calle 23 # 2n34 - Medellin - Antioquia',
             rol: 1
         },
         {   
             Id_Empleado: 2,
             cedula: '789012',
             password: 'qwert',
+            nombre: 'Empleado_2',
+            direccion: 'calle 23 # 2n34 - Medellin - Antioquia',
             rol: 2
         },
         {   
             Id_Empleado: 3,
             cedula: '345678',
             password: 'qwert',
+            nombre: 'Empleado_3',
+            direccion: 'calle 23 # 2n34 - Medellin - Antioquia',
             rol: 3
         }
     ],
@@ -64,9 +70,6 @@ const DATABASE = {
          }
     ],
     productos: [
-
-    ],
-    empleados: [
 
     ],
     pendientes: [

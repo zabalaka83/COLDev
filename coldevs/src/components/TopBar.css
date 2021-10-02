@@ -8,7 +8,7 @@
 }
 
 #myImg{
-    padding-left: 15vh;
+    padding-left: 12vh;
 }
 
 #name{
@@ -26,4 +26,5 @@
 #salir :hover{
     transition: 200ms;
     color: #ced4d6;
+    cursor: pointer;
 }

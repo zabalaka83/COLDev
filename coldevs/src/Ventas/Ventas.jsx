@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import "../App.css"
 /* import Venta from './venta/Venta' */
 import './ventas.css'
-import DATABASE from '../data'
+// import DATABASE from '../data'
 import { useHistory } from 'react-router-dom'
 
 const Ventas = ({ user }) => {
@@ -15,6 +15,14 @@ const Ventas = ({ user }) => {
     ]) */
 
     const histoy = useHistory();
+
+    const submitProduct = (event) => {
+        event.preventDefault();
+    }
+
+    const submitClient = (event) => {
+        event.preventDefault();
+    }
 
     return (
         <>
@@ -41,26 +49,26 @@ const Ventas = ({ user }) => {
                                     <div className='busca'>
                                         <div className="container-fluid col-md-4">
                                             <form className="d-flex">
-                                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                                                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                                                 <button type="submit" className="btn btn-primary">Buscar</button>
                                             </form>
                                         </div>
                                     </div>
-                                    <form className="row g-3">
+                                    <form className="row g-3" onSubmit={submitClient}>
                                         <div className="col-md-6">
-                                            <label for="inputName" className="form-label">Nombre Completo</label>
+                                            <label className="form-label">Nombre Completo</label>
                                             <input type="text" className="form-control" id="inputNombre" />
                                         </div>
                                         <div className="col-md-6">
-                                            <label for="inputEmail" className="form-label">E-Mail</label>
+                                            <label className="form-label">E-Mail</label>
                                             <input type="email" className="form-control" id="inputAddress2" />
                                         </div>
                                         <div className="col-6">
-                                            <label for="inputAddress" className="form-label">Direccion</label>
+                                            <label className="form-label">Direccion</label>
                                             <input type="text" className="form-control" id="inputAddress" />
                                         </div>
                                         <div className="col-md-6">
-                                            <label for="inputTel" className="form-label">Telefono</label>
+                                            <label className="form-label">Telefono</label>
                                             <input type="tel" className="form-control" id="inputTelefono" />
                                         </div>
 
@@ -79,12 +87,12 @@ const Ventas = ({ user }) => {
                                             <form className="d-flex">
 
                                                 <div className="px-2">
-                                                <label for="inputFecha" className="form-label">Fecha Inicio </label>
-                                                <input class="form-control me-4" type="date" placeholder="Fecha" aria-label="Search" />
+                                                <label className="form-label">Fecha Inicio </label>
+                                                <input className="form-control me-4" type="date" placeholder="Fecha" aria-label="Search" />
                                                 </div>
                                                 <div className="px-2">
-                                                <label for="inputFecha" className="form-label">Fecha Cierre </label>
-                                                <input class="form-control me-4" type="date" placeholder="Fecha" aria-label="Search" />
+                                                <label className="form-label">Fecha Cierre </label>
+                                                <input className="form-control me-4" type="date" placeholder="Fecha" aria-label="Search" />
                                                 </div>
                                                 </form>
                                             </div>
@@ -143,13 +151,13 @@ const Ventas = ({ user }) => {
                                     <div className="formulario">
                                         <h1>Productos</h1>
                                     </div>
-                                    <form className="row g-3">
+                                    <form className="row g-3" onSubmit={submitProduct}>
                                         <div className="col-md-6">
-                                            <label for="inputProducto" className="form-label">Producto</label>
+                                            <label className="form-label">Producto</label>
                                             <input type="text" className="form-control" id="inputProducto" />
                                         </div>
                                         <div className="col-md-6">
-                                            <label for="inputCantidad" className="form-label">Cantidad</label>
+                                            <label className="form-label">Cantidad</label>
                                             <input type="number" className="form-control" id="inputCantidad" />
                                         </div>
 
@@ -162,7 +170,7 @@ const Ventas = ({ user }) => {
                                 </div>
                                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
                                     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-                                    crossorigin="anonymous"></script>
+                                    /*crossorigin="anonymous"*/></script>
 
                             </div>
                         </div>

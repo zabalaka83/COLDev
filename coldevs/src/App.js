@@ -20,10 +20,10 @@ function App() {
 
   return (
     <Router>
-      <TopBar user={user}/>
+      <TopBar user={user} setUser={setUser}/>
       <Switch>
         <Route exact path="/login">
-          <Login user={user}/>
+          <Login user={user} setUser={setUser}/>
         </Route>
         <Route exact path="/app/ventas" /* component={Ventas} */>
                 /* <LeftBar user={user}/>
