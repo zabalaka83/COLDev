@@ -13,9 +13,9 @@ import Denegado from "./components/Denegado"
 function App() {
 
   const [ user, setUser ] = useState({
-    Id_Empleado: 1,
-    nombre: 'Alejandro Caicedo',
-    rol: 1
+    Id_Empleado: 0,
+    nombre: '',
+    rol: 0
   });
 
   return (

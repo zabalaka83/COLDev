@@ -2,19 +2,19 @@ const DATABASE = {
     users: [
         {   
             Id_Empleado: 1,
-            cedula: 123456,
+            cedula: '123456',
             password: 'qwert',
             rol: 1
         },
         {   
             Id_Empleado: 2,
-            cedula: 789012,
+            cedula: '789012',
             password: 'qwert',
             rol: 2
         },
         {   
             Id_Empleado: 3,
-            cedula: 345678,
+            cedula: '345678',
             password: 'qwert',
             rol: 3
         }
