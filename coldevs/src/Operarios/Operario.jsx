@@ -1,7 +1,8 @@
 import React from 'react'
 import '../App.css'
 import { useHistory } from 'react-router-dom'
-import { BsFillCheckCircleFill } from "react-icons/bs";
+import TablaVentas from './TablaVentas'
+import { FaCheckSquare } from "react-icons/fa";
 
 const Operario = ({ user }) => {
 
@@ -37,7 +38,7 @@ const Operario = ({ user }) => {
                                         <td>3</td>
 
 
-                                        <td className="detail" ><BsFillCheckCircleFill /></td>
+                                        <td className="detail" ><FaCheckSquare /></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
@@ -46,7 +47,7 @@ const Operario = ({ user }) => {
                                         <td>5</td>
 
 
-                                        <td className="detail" ><BsFillCheckCircleFill/></td>
+                                        <td className="detail" ><FaCheckSquare /></td>
 
                                     </tr>
 
@@ -57,7 +58,7 @@ const Operario = ({ user }) => {
                                         <td>2</td>
 
 
-                                        <td className="detail" ><BsFillCheckCircleFill /></td>
+                                        <td className="detail" ><FaCheckSquare /></td>
 
                                     </tr>
                                 </tbody>

@@ -13,9 +13,9 @@ const Stock = ({user}) => {
                 user.Id_Empleado === 0  ?
                 history.push('/denegado'):
                 <div className="main">
-                   <div className="detalle">
+                   <div >
                                 <div className="formulario">
-                                    <h1>Detalle Productos</h1>                                                                 
+                                    <h1>Productos En Stock</h1>                                                                 
                 
                                 </div>
                                 <table className="table">
@@ -25,6 +25,7 @@ const Stock = ({user}) => {
                                             <th scope="col">Producto</th>
                                             <th scope="col">Precio Unitario</th>
                                             <th scope="col">Cantidad</th>
+                                            <th scope="col">Adicionar</th>
                                         </tr>
                                     </thead>
                                     <tbody>
