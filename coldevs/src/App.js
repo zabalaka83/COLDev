@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import TopBar from './components/TopBar'
 import LeftBar from "./components/LeftBar";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
