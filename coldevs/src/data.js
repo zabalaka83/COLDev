@@ -208,7 +208,7 @@ const DATABASE = {
          }
     ],
     productos: [
-
+        
     ],
     pendientes: [
         

@@ -2,7 +2,7 @@ import React from 'react'
 import '../App.css'
 import { useHistory } from 'react-router-dom'
 import TablaVentas from './TablaVentas'
-import { FaCheckSquare } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 
 const Operario = ({ user }) => {
 
@@ -38,7 +38,7 @@ const Operario = ({ user }) => {
                                         <td>3</td>
 
 
-                                        <td className="detail" ><FaCheckSquare /></td>
+                                        <td className="detail" style={{color: 'green'}} ><FaCheckCircle /></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
@@ -47,7 +47,7 @@ const Operario = ({ user }) => {
                                         <td>5</td>
 
 
-                                        <td className="detail" ><FaCheckSquare /></td>
+                                        <td className="detail" style={{color: 'green'}}><FaCheckCircle /></td>
 
                                     </tr>
 
@@ -58,7 +58,7 @@ const Operario = ({ user }) => {
                                         <td>2</td>
 
 
-                                        <td className="detail" ><FaCheckSquare /></td>
+                                        <td className="detail" style={{color: 'green'}}><FaCheckCircle /></td>
 
                                     </tr>
                                 </tbody>
