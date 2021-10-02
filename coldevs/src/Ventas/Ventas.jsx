@@ -32,35 +32,21 @@ const Ventas = ({ user }) => {
                                     </div>
                                     <form className="row g-3">
                                         <div className="col-md-6">
-                                            <label for="inputName" className="form-label">Nombre</label>
+                                            <label for="inputName" className="form-label">Nombre Completo</label>
                                             <input type="text" className="form-control" id="inputNombre" />
-                                        </div>
-                                        <div className="col-md-6">
-                                            <label for="inputApellido" className="form-label">Apellido</label>
-                                            <input type="text" className="form-control" id="inputApellido" />
-                                        </div>
-                                        <div className="col-12">
-                                            <label for="inputAddress" className="form-label">Direccion</label>
-                                            <input type="text" className="form-control" id="inputAddress" />
                                         </div>
                                         <div className="col-md-6">
                                             <label for="inputEmail" className="form-label">E-Mail</label>
                                             <input type="email" className="form-control" id="inputAddress2" />
                                         </div>
+                                        <div className="col-6">
+                                            <label for="inputAddress" className="form-label">Direccion</label>
+                                            <input type="text" className="form-control" id="inputAddress" />
+                                        </div>
                                         <div className="col-md-6">
                                             <label for="inputTel" className="form-label">Telefono</label>
                                             <input type="tel" className="form-control" id="inputTelefono" />
                                         </div>
-                                        <div className="col-md-6">
-                                            <label for="inputCity" className="form-label">Ciudad</label>
-                                            <input type="text" className="form-control" id="inputCity" />
-                                        </div>
-                                        <div className="col-md-6">
-                                            <label for="inputDepartamento" className="form-label">Departamento</label>
-                                            <input type="text" id="inputDepartamento" className="form-control" />
-
-                                        </div>
-
 
                                         <div className="col-12">
                                             <button type="submit" className="btn btn-primary">Guardar</button>
@@ -72,10 +58,23 @@ const Ventas = ({ user }) => {
                                 <div className="detalle">
                                     <div className="formulario">
                                         <h1>Detalle venta</h1>
-                                        <div className="container col-md-4">
-                                            <label for="inputFecha" className="form-label">Fecha Venta</label>
-                                            <input class="form-control me-2" type="date" placeholder="Fecha" aria-label="Search" />
-                                        </div>
+                                        
+                                            <div className="container-fluid col-md-4">
+                                            <form className="d-flex">
+
+                                                <div className="px-2">
+                                                <label for="inputFecha" className="form-label">Fecha Inicio </label>
+                                                <input class="form-control me-4" type="date" placeholder="Fecha" aria-label="Search" />
+                                                </div>
+                                                <div className="px-2">
+                                                <label for="inputFecha" className="form-label">Fecha Cierre </label>
+                                                <input class="form-control me-4" type="date" placeholder="Fecha" aria-label="Search" />
+                                                </div>
+                                                </form>
+                                            </div>
+                                           
+                                        
+
                                     </div>
                                     <table className="table">
                                         <thead>
@@ -119,9 +118,7 @@ const Ventas = ({ user }) => {
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <div className="col-12">
-                                        <button type="submit" className="btn btn-primary">Guardar</button>
-                                    </div>
+
 
                                 </div>
 
