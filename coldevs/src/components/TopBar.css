@@ -1,0 +1,28 @@
+#top{
+    background-color: #007AFF;
+    /* font-family: Roboto, Medium; */
+    color: #fff;
+    height: 10vh;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#myImg{
+    padding-left: 5vh;
+}
+
+#name{
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+#salir{
+    padding: 1vh;
+    font-size: 5vh;
+}
+
+#salir :hover{
+    transition: 200ms;
+    color: #ced4d6;
+}
