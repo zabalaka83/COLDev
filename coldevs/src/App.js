@@ -25,9 +25,10 @@ function App() {
         <Route exact path="/login">
           <Login user={user}/>
         </Route>
-        <Route exact path="/app/ventas">
-          <LeftBar user={user}/>
-          <Ventas user={user}/>
+        <Route exact path="/app/ventas" /* component={Ventas} */>
+                /* <LeftBar user={user}/>
+          <Ventas user={user}/> */
+
         </Route>
         <Route exact path="/app/roles">
           <LeftBar user={user}/>

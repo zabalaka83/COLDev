@@ -1,11 +1,18 @@
-import React from 'react'
+import React,{useState} from 'react'
 import "../App.css"
-
+/* import Venta from './venta/Venta' */
 import './ventas.css'
 import DATABASE from '../data'
 import { useHistory } from 'react-router-dom'
 
 const Ventas = ({ user }) => {
+    /* const [dbVentas,setdbVentas]=useState([
+        {id:123,nombre:"camisa",cantidad:5,precio:10000},
+        {id:1223,nombre:"pantalo",cantidad:55,precio:160000},
+        {id:1253,nombre:"jean",cantidad:65,precio:100700},
+        {id:1253,nombre:"polo",cantidad:75,precio:190000}
+
+    ]) */
 
     const histoy = useHistory();
 
@@ -13,8 +20,17 @@ const Ventas = ({ user }) => {
         <>
             {
                 user.Id_Empleado === 0 ?
-                    histoy.push('/denegado') :
+                   histoy.push('/app/ventas') :
                     <div className="main">
+                        {/* <div>
+                            {dbVentas.map(venta1=>{
+                                return(
+                                    <Venta  total={venta1}/>  
+                                )
+
+                            })
+                            }
+                        </div> */}
                         <div>
                             <div className="contenedor">
                                 <div className="cliente">
