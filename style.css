@@ -6,13 +6,34 @@
     --primary-color: #007aff;
     --secondary-color: #ffffff;
     --hover-color: #0059d6;
-
+}
+html{
+    height: 100%;
+}
+body{
+    min-height: 100%;
+    font-size: 1.2rem;
+}
+.header{
+    grid-area: header;
+}
+.side-menu{
+    grid-area: side-menu;
+}
+.contenido{
+    grid-area: main;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "side-menu" 
+    "main";
 }
 
 .top-nav{
-    align-items: float-box;
     background-color: var(--primary-color);
-    height: 100px;
+    height: fit-content;
     width: 100%;
     padding: 19px;
 }
@@ -24,24 +45,57 @@
 
 .navbar-nav a{
     color: #ffffff;
-    padding-left: 20px;
+    padding: 2%;
 }
 #logout img{
     height: 45px;
 }
 
 aside {
-    width: 120px;
-    height: 800px;
+    width: 100%;
+    height: fit-content;
     background: var(--primary-color);
+    display: inline;
+    padding: 1%;
 }
-div button img{
-    width: 80px;
-    height: auto;
+.nav{
+    justify-content: space-around;
 }
-.list-group-item{
-    background: var(--primary-color) ;
+.side-menu img{
+    width: auto;
+    height: 70px;
+    padding: 5px;
+    display: inline;
 }
-.list-group-item:hover{
-    background: var(--hover-color) ;
+.content-page{
+    width: 100% !important;
+}
+#user-form{
+    margin: 50px;
+}
+form div .card{
+    width: 600px;
+    height: fit-content;
+    background: #e2e2e2;
+}
+
+@media (min-width: 600px){
+    .grid-container{
+        grid-template:
+        "header header"
+        "side-menu main";
+    }
+    aside {
+        width: 90px;
+        height: 800px;
+        background: var(--primary-color);
+    }
+    .nav-link img{
+        padding: 1%;
+        width: 70px ;
+        height: auto;
+    }
+    #send-button a{
+        width: 70%;
+    }
 }
