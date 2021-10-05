@@ -73,19 +73,19 @@ aside {
 #user-form{
     margin: 50px;
 }
-form div .card{
-    width: 600px;
-    height: fit-content;
-    background: #e2e2e2;
-    }
 .card-header{
     background: var(--primary-color);
     color: var(--secondary-color);
     font-weight: bold;
 }
+form div .card{
+    width: 600px;
+    height: fit-content;
+    background: #e2e2e2;
+    }
+
 #delete-user{
     margin-top: 50px;
-    width: 100%;
 }
 
 @media (min-width: 600px){

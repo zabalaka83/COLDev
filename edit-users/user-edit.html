@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios/ COLDEV Manufacturing</title>
+    <link rel="shortcut icon" href="./Iconos-Info-COLDEV-MANUFACTURING/Favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="grid-container">
+    <header class="header">
+        <nav class="navbar top-nav">
+            <div class="container d-flex flex-row">
+                <div>
+                    <img src="../Iconos-Info-COLDEV-MANUFACTURING/LogoHorizontal.png" alt="Coldev-Logo" class="nav-logo">
+                </div>
+    
+                <div class="navbar-nav d-flex flex-row justify-content-end">
+                     <a href="">foto-perfil</a>
+                     <a href="">info-perfil</a>
+                     <a href="" id="logout">
+                         <img src="../Iconos-Info-COLDEV-MANUFACTURING/Logout-icon.png" alt="">
+                     </a>
+                </div>
+            </div>
+        </nav>            
+    </header>
+
+            <aside class="side-menu">
+                <div>
+                    <ul class="nav">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">
+                            <img src="../Iconos-Info-COLDEV-MANUFACTURING/Icono-Ventas.png" alt="sales-icon">
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">
+                            <img src="../Iconos-Info-COLDEV-MANUFACTURING/ícono-roles.png" alt="roles-icon">
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">
+                            <img src="../Iconos-Info-COLDEV-MANUFACTURING/Icono-Productos.png" alt="products-icon">
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link disabled" href="#">
+                            <img src="../Iconos-Info-COLDEV-MANUFACTURING/Icono-Admin.png" alt="admin-icon">
+                          </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside> 
+
+        </article class="contenido">
+            <form id="user-form">                            
+                <div class="card container float-left"></div>  
+                    <div class="card-header">Editar Usuario</div>
+
+                    <div class="col-md-12">
+                        <div class="form-row col-md-4 float-left">
+                            <div class="form-group">
+                                <label for="input-name">Nombre</label>
+                                <input type="text" class=" form-control" placeholder="Weimer">
+                            </div>            
+                        </div>
+                        <div class="form-row col-md-4 float-left">
+                            <div class="form-group">
+                                <label for="input-lastname">Apellido</label>
+                                <input type="text" class=" form-control" placeholder="Cuartas Molina">
+                            </div>            
+                        </div>
+                        <div class="form-row col-md-4 float-left">
+                            <div class="form-group">
+                                <label for="input-id">Numero de ID</label>
+                                <input type="text" class=" form-control" placeholder="123456">
+                            </div>            
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-row col-md-4 float-left">
+                            <div class="form-group">
+                                <label for="input-adress">Dirección</label>
+                                <input type="text" class=" form-control" placeholder="Fake street 123">
+                            </div>            
+                        </div>
+                        <div class="form-row col-md-4 float-left">
+                            <div class="form-group">
+                                <label for="input-phone">Teléfono</label>
+                                <input type="text" class=" form-control" placeholder="312 000 0000">
+                            </div>            
+                        </div>
+                        <div class="form-row col-md-4 float-left">
+                            <div class="form-group">
+                                <label for="input-email">Correo</label>
+                                <input type="text" class=" form-control" placeholder="usuario@walla.com">
+                            </div>            
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group col-md-4 float-left">
+                            <label for="input-role">Role</label>
+                            <select id="input-role" class="form-control">
+                            <option selected>Administrador</option>
+                            <option>Gerente</option>
+                            <option>Vendedor</option>
+                            <option>Operario</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 float-left" id="send-button">
+                            <a href="#" class="btn btn-primary">Guardar cambios</a>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="col-md-12 d-flex" id="delete-user">                    
+                    <a href="#" class="btn btn-danger btn-lg btn-block">Eliminar Usuario</a>
+                 </div>
+            </form>
+            
+        <article>
+                
+        
+
+
+
+    
+</body>
+</html>
