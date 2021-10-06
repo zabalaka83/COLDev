@@ -10,6 +10,7 @@ import Operario from './Operarios/Operario'
 import Stock from './Stock/Stock'
 import Denegado from "./components/Denegado"
 import DetalleVenta from './Ventas/DetalleVenta'
+import EditarUsuario from "./Roles/EditarUsuario";
 
 function App() {
 
@@ -38,6 +39,10 @@ function App() {
         <Route exact path="/app/ventas" /* component={Ventas} */>
           <LeftBar user={user}/>
           <Ventas user={user} ventas={venta} setVenta={setVenta}/>
+        </Route>
+        <Route exact path="/app/editarUsuario">
+          <LeftBar user={user}/>
+          <EditarUsuario user={user}/>
         </Route>
         <Route exact path="/app/ventas/detalles">
           <LeftBar user={user}/>

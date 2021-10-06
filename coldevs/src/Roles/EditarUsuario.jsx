@@ -1,10 +1,9 @@
 import React from 'react'
 import '../App.css'
-import './Roles.css'
-/* import './roles2.css' */
+
 import { useHistory } from 'react-router-dom'
 
-const Roles = ({ user, setUser }) => {
+const EditarUsuario = ({ user }) => {
 
     const history = useHistory();
 
@@ -14,37 +13,21 @@ const Roles = ({ user, setUser }) => {
                 user.Id_Empleado === 0 ?
                     history.push('/denegado') :
                     <div className="main">
-
                         <article className="contenido">
                             <form id="user-form">
                                 <div className="card container float-left">
-                                    <div className="card-header">Usuarios</div>
-                                    <table className="table table-striped mt-6">
-                                        <thead>
-                                            <tr>
-                                                <th>Nombre</th>
-                                                <th>Cargo</th>
-                                                <th>Departamento</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="user-list"></tbody>
-                                    </table>
-                                </div>
-
-                                <div className="card container float-left">
-                                    <div className="card-header">Nuevo Usuario</div>
+                                    <div className="card-header">Editar Usuario</div>
 
                                     <div className="col-md-12">
                                         <div className="form-row col-md-4 float-left">
                                             <div className="form-group">
-                                                <label>Nombre</label>
+                                                <label >Nombre</label>
                                                 <input type="text" className=" form-control" placeholder="Weimer" />
                                             </div>
                                         </div>
                                         <div className="form-row col-md-4 float-left">
                                             <div className="form-group">
-                                                <label>Apellido</label>
+                                                <label >Apellido</label>
                                                 <input type="text" className=" form-control" placeholder="Cuartas Molina" />
                                             </div>
                                         </div>
@@ -87,19 +70,20 @@ const Roles = ({ user, setUser }) => {
                                             </select>
                                         </div>
                                         <div className="col-md-4 float-left" id="send-button">
-                                            <a href="#" className="btn btn-primary">Enviar</a>
+                                            <a href="#" className="btn btn-primary">Guardar cambios</a>
                                         </div>
                                     </div>
-
+                                </div>
+                                <div className="col-md-12 d-flex" id="delete-user">
+                                    <a href="#" className="btn btn-danger btn-lg btn-block">Eliminar Usuario</a>
                                 </div>
                             </form>
+
                         </article>
-
-
-                    </div>
+                    </div >
             }
         </>
     )
 }
 
-export default Roles
+export default EditarUsuario
