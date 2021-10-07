@@ -3,10 +3,17 @@ import '../App.css'
 import './Stock.css'
 import { useHistory } from 'react-router-dom'
 import { MdAddCircle } from "react-icons/md";
+import Addstock from './Addstock';
+
 
 const Stock = ({user}) => {
+    
 
     const history = useHistory();// id Nombre precio cantidad
+
+    const addProduct = () =>{
+        history.push('/app/addstock');
+    }
 
     return (
         <>
@@ -38,7 +45,7 @@ const Stock = ({user}) => {
                                             <td>3</td>
 
                                             
-                                            <td className="detail" ><MdAddCircle /></td>
+                                            <td onClick={addProduct}  className="detail" ><MdAddCircle /></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>
