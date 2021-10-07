@@ -45,7 +45,7 @@ const Login = ({user, setUser}) => {
             {
                 user.Id_Empleado !== 0 ?
                 history.push('/app/roles'):
-                <div className='container-fluid log shadow p-3 mb-5 border rounded'>
+                <div className='container-fluid log shadow p-3 mb-5 border'>
                     <h1 className='text-center fw-bold'>Log In</h1>
                     {
                       log.res === 2 ? 
@@ -60,14 +60,14 @@ const Login = ({user, setUser}) => {
                         <div className="form-text">Por favor sin puntos o comas.</div>
                       </div>
                       <div className="mb-3">
-                        <label className="form-label fw-bold">Password</label>
+                        <label className="form-label fw-bold">Contraseña</label>
                         <input name='password' type="password" className="form-control" onChange={changeData} required />
                       </div>
                       <div className="mb-3 form-check">
                         <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                        <label className="form-check-label">Check me out</label>
+                        <label className="form-check-label">Recordar</label>
                       </div>
-                      <button type="submit" className="btn btn-primary">Submit</button>
+                      <button type="submit" className="btn btn-primary">Enviar</button>
                     </form>
                 </div>
             }

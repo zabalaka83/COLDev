@@ -1,73 +1,21 @@
-.contenedor{     
-         
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    width: 100%;
-   
-  
-  }
-  .navbar{
-    background-color: blue;
-  }
-  .side{
-    width: 20vh;
-    background-color: blue;
-    height:100vmax;
-    position:absolute;
-    
-  }
 
-   .formulario{
-      
-      background-color: #007aff;
-      margin:auto;
-      color:#FFFFFF;
-      padding:10px 0px 10px 0px;
-      text-align: left;
-      font-size: 16px;
-      border-radius:15px 15px 0px 0px ;
-    }  
-
-    .busca{
-      padding: 3%;
-     
-    }
-
-    .producto{
-        margin-top: 2%;
-        border: 2px solid black;
-        border-radius: 15px;
-        padding: 5px;
-    }
-
-    .detalle{
-      margin-top: 2%;
-      border: 2px solid black;
-      border-radius: 15px;
-      padding: 5px;
+.contenido{
+  margin: 2vh;
+}
+.card{
+  margin-bottom: 3vh;
+}
+.card-header{
+  background-color: #007AFF;
+  color: #fff;
+  font-weight: bold;
+}
+#user-form{
+  gap: 1vh;
+}
+.input-group{
+  width: 90%;
   }
-  .iconoVentas{
-    margin-block-start: 5%;
-    margin-left: 12%;
-    width: 15vh;
-    
-  }
-  .icono{
-    margin-top: 20%;
-    position: relative;
-   margin-left: 12%;
-    width: 15vh;
-    
-  }
-  .form-label{
-    padding-left: 10px;
-  }
-
-  .cliente{
-    border: 2px solid black;
-    border-radius: 15px;
-    padding: 5px;
-  }
-
   
 
   

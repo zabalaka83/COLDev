@@ -1,10 +1,19 @@
 .log {
     margin-top: 15vh;
     padding: 4vh;
-    background-color: rgb(226, 212, 166);
+    background-color: #ffffff;
     width: 60vh;
 }
 
 h1 {
     margin-bottom: 5vh;
+    color: #007aff;
+}
+input{
+    background-color: #ffffff;
+}
+button{
+    margin-top: 3vh;
+    width: 100%;
+    
 }

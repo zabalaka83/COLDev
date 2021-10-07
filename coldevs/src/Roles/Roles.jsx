@@ -16,9 +16,10 @@ const Roles = ({ user, setUser }) => {
                     <div className="main">
 
                         <article className="contenido">
-                            <form id="user-form">
-                                <div className="card container float-left">
+                            <form>
+                                <div className="card float-left">
                                     <div className="card-header">Usuarios</div>
+                                    <div className="container">
                                     <table className="table table-striped mt-6">
                                         <thead>
                                             <tr>
@@ -30,12 +31,13 @@ const Roles = ({ user, setUser }) => {
                                         </thead>
                                         <tbody id="user-list"></tbody>
                                     </table>
+                                    </div>
                                 </div>
 
-                                <div className="card container float-left">
+                                <div className="card float-left" id="user-form">
                                     <div className="card-header">Nuevo Usuario</div>
 
-                                    <div className="col-md-12">
+                                    <div className="container input-group col-md-12">
                                         <div className="form-row col-md-4 float-left">
                                             <div className="form-group">
                                                 <label>Nombre</label>
@@ -56,7 +58,7 @@ const Roles = ({ user, setUser }) => {
                                         </div>
                                     </div>
 
-                                    <div className="col-md-12">
+                                    <div className="container input-group col-md-12">
                                         <div className="form-row col-md-4 float-left">
                                             <div className="form-group">
                                                 <label>Dirección</label>
@@ -76,7 +78,7 @@ const Roles = ({ user, setUser }) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-md-12">
+                                    <div className=" container input-group col-md-12">
                                         <div className="form-group col-md-4 float-left">
                                             <label>Role</label>
                                             <select id="input-role" className="form-control">
