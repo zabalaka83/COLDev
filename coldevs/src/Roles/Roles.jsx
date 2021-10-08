@@ -2,11 +2,19 @@ import React from 'react'
 import '../App.css'
 import './Roles.css'
 /* import './roles2.css' */
+import DATABASE from '../data'
+import { FaUserEdit } from "react-icons/fa";
 import { useHistory } from 'react-router-dom'
 
 const Roles = ({ user, setUser }) => {
+    const ListaEmpleados = DATABASE.empleados;
 
     const history = useHistory();
+
+    const editarUsuario = (event) => {
+        // console.log(event.target.value);
+        history.push('/app/editarUsuario')
+    }
 
     return (
         <>
@@ -20,26 +28,42 @@ const Roles = ({ user, setUser }) => {
                                 <div className="card float-left">
                                     <div className="card-header">
                                         <h3>Usuarios</h3>
-                                        </div>
+                                    </div>
                                     <div className="container">
-                                    <table className="table table-striped mt-6">
-                                        <thead>
-                                            <tr>
-                                                <th>Nombre</th>
-                                                <th>Cargo</th>
-                                                <th>Departamento</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="user-list"></tbody>
-                                    </table>
+                                        <table className="table table-striped mt-6">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Nombre</th>
+                                                    <th>Cédula</th>
+                                                    <th>Rol</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="user-list">
+                                                {
+                                                    ListaEmpleados.map((item, index) => {
+                                                        return (
+                                                            // Hacer un componente  fila para mantener la informacion
+                                                            <tr key={index}>
+                                                                <th >{item.Id_Empleado}</th>
+                                                                <td>{item.nombre}</td>
+                                                                <td>{item.cedula}</td>
+                                                                <td>{item.rol}</td>
+                                                                <td className="editarUsuario" onClick={editarUsuario}><FaUserEdit /></td>
+                                                            </tr>
+                                                        )
+                                                    })
+                                                }                                                
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
 
                                 <div className="card float-left" id="user-form">
                                     <div className="card-header">
                                         <h3>Nuevo Usuario</h3>
-                                        </div>
+                                    </div>
 
                                     <div className="container input-group col-md-12">
                                         <div className="form-row col-md-4 float-left">
