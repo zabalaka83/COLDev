@@ -6,6 +6,9 @@ import { MdAddCircle } from "react-icons/md";
 import Addstock from './Addstock';
 import { BsFillAlarmFill } from "react-icons/bs";
 
+import Quickproduct from './Quickproduct';
+import { FiMinusCircle } from "react-icons/fi";
+
 
 const Stock = ({user}) => {
     
@@ -14,6 +17,9 @@ const Stock = ({user}) => {
 
     const addProduct = () =>{
         history.push('/app/addstock');
+    }
+    const quickProduct = () =>{
+        history.push('/app/quickproduct');
     }
 
     return (
@@ -34,7 +40,7 @@ const Stock = ({user}) => {
                                             <th scope="col">Producto</th>
                                             <th scope="col">Precio Unitario</th>
                                             <th scope="col">Cantidad</th>
-                                            <th scope="col">Adicionar</th>
+                                            <th scope="col">Operaciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -47,6 +53,7 @@ const Stock = ({user}) => {
 
                                             
                                             <td onClick={addProduct}  className="detail" ><MdAddCircle/></td>
+                                            <td onClick={quickProduct}  className="detail"><FiMinusCircle/></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>
@@ -56,7 +63,8 @@ const Stock = ({user}) => {
                                             <td>5</td>
 
                                            
-                                            <td className="detail" ><MdAddCircle /></td>
+                                            <td className="detail" ><MdAddCircle/></td>
+                                            <td onClick={quickProduct}  className="detail"><FiMinusCircle/></td>
 
                                         </tr>
                 
@@ -69,6 +77,7 @@ const Stock = ({user}) => {
 
                                            
                                             <td className="detail" ><MdAddCircle /></td>
+                                            <td onClick={quickProduct}  className="detail"><FiMinusCircle/></td>
 
                                         </tr>
                                     </tbody>

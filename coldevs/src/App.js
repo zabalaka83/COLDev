@@ -12,6 +12,7 @@ import Denegado from "./components/Denegado"
 import DetalleVenta from './Ventas/DetalleVenta'
 import EditarUsuario from "./Roles/EditarUsuario";
 import Addstock from "./Stock/Addstock";
+import Quickproduct from "./Stock/Quickproduct";
 
 function App() {
 
@@ -64,6 +65,10 @@ function App() {
         <Route exact path="/app/addstock">
           <LeftBar user={user}/>
           <Addstock user={user}/>
+        </Route>
+        <Route exact path="/app/quickproduct">
+          <LeftBar user={user}/>
+          <Quickproduct user={user}/>
         </Route>
         <Route exact path="/denegado">        
           <Denegado />

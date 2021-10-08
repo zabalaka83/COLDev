@@ -1,10 +1,8 @@
-.contenedor{     
-         
+.contenedor{       
     font-family: Georgia, 'Times New Roman', Times, serif;
     width: 100%;
-   
-  
   }
+
   .navbar{
     background-color: blue;
   }
@@ -68,7 +66,3 @@
     border-radius: 15px;
     padding: 5px;
   }
-
-  
-
-  
