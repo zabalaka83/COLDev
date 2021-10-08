@@ -18,7 +18,7 @@ const TablaVentas = ({venta, setVenta}) => {
     return (
         <div className="detalle">
             <div className="formulario">
-                <h1>Ventas</h1>
+                <h3>Ventas</h3>
             </div>
             <table className="table">
               <thead>

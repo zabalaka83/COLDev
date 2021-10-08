@@ -32,7 +32,7 @@ const DetalleVenta = ({user, venta, setVenta}) => {
                         <div className="contenedor">
                             <div className="cliente">
                                 <div className="formulario">
-                                    <h1>Cliente</h1>
+                                    <h3>Cliente</h3>
                                 </div>
                                 <div className='busca'>
                                     <div className="container-fluid col-md-4">
@@ -67,7 +67,7 @@ const DetalleVenta = ({user, venta, setVenta}) => {
                 
                             <div className="detalle">
                                 <div className="formulario">
-                                    <h1>Detalle venta</h1>
+                                    <h3>Detalle venta</h3>
                                     
                                     <div className="container-fluid col-md-4">
                                     <form className="d-flex">
@@ -131,7 +131,7 @@ const DetalleVenta = ({user, venta, setVenta}) => {
                 
                             <div className="producto">
                                 <div className="formulario">
-                                    <h1>Productos</h1>
+                                    <h3>Productos</h3>
                                 </div>
                                 <form className="row g-3" onSubmit={submitProduct}>
                                     <div className="col-md-6">

@@ -16,7 +16,8 @@ const EditarUsuario = ({ user }) => {
                         <article className="contenido">
                             <form id="user-form">
                                 <div className="card container float-left">
-                                    <div className="card-header">Editar Usuario</div>
+                                    <div className="card-header">
+                                        <h3>Editar Usuario</h3></div>
 
                                     <div className="col-md-12">
                                         <div className="form-row col-md-4 float-left">

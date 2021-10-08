@@ -34,14 +34,14 @@
 
     .producto{
         margin-top: 2%;
-        border: 2px solid black;
+        border: 1px solid rgb(168, 168, 168);
         border-radius: 15px;
         padding: 5px;
     }
 
     .detalle{
       margin-top: 2%;
-      border: 2px solid black;
+      border: 1px solid rgb(168, 168, 168);
       border-radius: 15px;
       padding: 5px;
   }
@@ -63,7 +63,7 @@
   }
 
   .cliente{
-    border: 2px solid black;
+    border: 1px solid rgb(168, 168, 168);
     border-radius: 15px;
     padding: 5px;
   }

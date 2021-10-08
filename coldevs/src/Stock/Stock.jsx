@@ -16,7 +16,7 @@ const Stock = ({user}) => {
                 <div className="main">
                    <div className="detalle">
                                 <div className="formulario">
-                                    <h1>Productos En Stock</h1>                                                                 
+                                    <h3>Productos En Stock</h3>                                                                 
                 
                                 </div>
                                 <table className="table">

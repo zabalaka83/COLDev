@@ -18,7 +18,9 @@ const Roles = ({ user, setUser }) => {
                         <article className="contenido">
                             <form>
                                 <div className="card float-left">
-                                    <div className="card-header">Usuarios</div>
+                                    <div className="card-header">
+                                        <h3>Usuarios</h3>
+                                        </div>
                                     <div className="container">
                                     <table className="table table-striped mt-6">
                                         <thead>
@@ -35,7 +37,9 @@ const Roles = ({ user, setUser }) => {
                                 </div>
 
                                 <div className="card float-left" id="user-form">
-                                    <div className="card-header">Nuevo Usuario</div>
+                                    <div className="card-header">
+                                        <h3>Nuevo Usuario</h3>
+                                        </div>
 
                                     <div className="container input-group col-md-12">
                                         <div className="form-row col-md-4 float-left">
