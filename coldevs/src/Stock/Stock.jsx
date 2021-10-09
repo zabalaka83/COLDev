@@ -10,81 +10,89 @@ import Quickproduct from './Quickproduct';
 import { FiMinusCircle } from "react-icons/fi";
 
 
-const Stock = ({user}) => {
-    
+const Stock = ({ user }) => {
+
 
     const history = useHistory();// id Nombre precio cantidad
 
-    const addProduct = () =>{
+    const addProduct = () => {
         history.push('/app/addstock');
     }
-    const quickProduct = () =>{
+    const quickProduct = () => {
         history.push('/app/quickproduct');
+    }
+
+    const nuevoProduct = () => {
+        history.push('/app/agregarproducto');
     }
 
     return (
         <>
             {
-                user.Id_Empleado === 0  ?
-                history.push('/denegado'):
-                <div className="main">
-                   <div className="detalle">
-                                <div className="formulario">
-                                    <h3>Productos En Stock</h3>                                                                 
-                
-                                </div>
-                                <table className="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Id_Producto</th>
-                                            <th scope="col">Producto</th>
-                                            <th scope="col">Precio Unitario</th>
-                                            <th scope="col">Cantidad</th>
-                                            <th scope="col">Operaciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                
-                                            <td>Camisa</td>
-                                            <td>10000</td>
-                                            <td>3</td>
-
-                                            
-                                            <td onClick={addProduct}  className="detail" ><MdAddCircle/></td>
-                                            <td onClick={quickProduct}  className="detail"><FiMinusCircle/></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                
-                                            <td>Jean</td>
-                                            <td>10000</td>
-                                            <td>5</td>
-
-                                           
-                                            <td className="detail" ><MdAddCircle/></td>
-                                            <td onClick={quickProduct}  className="detail"><FiMinusCircle/></td>
-
-                                        </tr>
-                
-                                        <tr>
-                                            <th scope="row">3</th>
-                
-                                            <td>Polo</td>
-                                            <td>10000</td>
-                                            <td>2</td>
-
-                                           
-                                            <td className="detail" ><MdAddCircle /></td>
-                                            <td onClick={quickProduct}  className="detail"><FiMinusCircle/></td>
-
-                                        </tr>
-                                    </tbody>
-                                </table>
-                
+                user.Id_Empleado === 0 ?
+                    history.push('/denegado') :
+                    <div className="main">                                         
+                        <div className="detalle">
+                            
+                            <div className="formulario">                                
+                                <h3>Productos En Stock</h3>
                             </div>
-                </div>
+                            <table className="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Id_Producto</th>
+                                        <th scope="col">Producto</th>
+                                        <th scope="col">Precio Unitario</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Operaciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+
+                                        <td>Camisa</td>
+                                        <td>10000</td>
+                                        <td>3</td>
+
+
+                                        <td onClick={addProduct} className="detail" ><MdAddCircle /></td>
+                                        <td onClick={quickProduct} className="detail"><FiMinusCircle /></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+
+                                        <td>Jean</td>
+                                        <td>10000</td>
+                                        <td>5</td>
+
+
+                                        <td className="detail" ><MdAddCircle /></td>
+                                        <td onClick={quickProduct} className="detail"><FiMinusCircle /></td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">3</th>
+
+                                        <td>Polo</td>
+                                        <td>10000</td>
+                                        <td>2</td>
+
+
+                                        <td className="detail" ><MdAddCircle /></td>
+                                        <td onClick={quickProduct} className="detail"><FiMinusCircle /></td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <button class="btn btn-primary" onClick="nuevoProduct">Nuevo Producto</button>
+                        {/* 
+                        <button className="btn btn-primary" onClick={addVenta}>Nueva Venta</button>
+                        */}
+                    </div>
             }
         </>
     )

@@ -70,6 +70,10 @@ function App() {
           <LeftBar user={user}/>
           <Quickproduct user={user}/>
         </Route>
+        <Route exact path="/app/quickproduct">
+          <LeftBar user={user}/>
+          <Quickproduct user={user}/>
+        </Route>
         <Route exact path="/denegado">        
           <Denegado />
         </Route>
