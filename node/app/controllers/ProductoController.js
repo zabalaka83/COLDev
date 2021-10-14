@@ -1,4 +1,4 @@
-const {Empleado} = require('../models/index');
+const {Productos} = require('../models/index');
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
@@ -7,27 +7,27 @@ module.exports = {
     // // CREATE
     create(req, res) {
         console.log('req', req.body);
-        Empleado.create(
+        Productos.create(
             req.body
-        ).then(empleado => {
-            res.json(empleado);
+        ).then(producto => {
+            res.json(producto);
         })
     },
 
 
     // INDEX /api/productos
     showByKeyWord(req, res) {
-        Empleado.findAll({
+        Productos.findAll({
             where: {
                 //name: req.params.name
 
-                cedula: {
-                    [Op.like]: `%${req.params.cedula}%`
+                nombre: {
+                    [Op.like]: `%${req.params.nombre}%`
                 }
 
             }
-        }).then(empleados => {
-            res.json(empleados);
+        }).then(productos => {
+            res.json(productos);
         });
     },
 
@@ -35,23 +35,23 @@ module.exports = {
     // INDEX /api/productos
     showAll(req, res) {
         console.log('entro');
-        Empleado.findAll({ include: 'rol' }).then(empleados => {
-            res.json(empleados);
+        Productos.findAll().then(productos => {
+            res.json(productos);
         })
     },
 
 
     // READ /api/posts/:id
     showById(req, res) {
-        Empleado.findByPk(req.params.id).then(empleados => {
-            res.json(empleados);
+        Productos.findByPk(req.params.id).then(productos => {
+            res.json(productos);
         })
     },
 
     // // UPDATE /api/posts/:id
     update(req, res) {
 
-        Empleado.update({
+        Productos.update({
             nombre: req.body.nombre
         }, {
             where: {
@@ -66,7 +66,7 @@ module.exports = {
 
     // DELETE /api/producto/:id
     delete(req, res) {
-        Empleado.destroy({
+       Productos.destroy({
             where: {
                 id: req.params.id
             }

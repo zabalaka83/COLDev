@@ -1,4 +1,4 @@
-const {Empleado} = require('../models/index');
+const {Rol} = require('../models/index');
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
@@ -7,52 +7,52 @@ module.exports = {
     // // CREATE
     create(req, res) {
         console.log('req', req.body);
-        Empleado.create(
+        Rol.create(
             req.body
-        ).then(empleado => {
-            res.json(empleado);
+        ).then(Rol => {
+            res.json(Rol);
         })
     },
 
 
     // INDEX /api/productos
     showByKeyWord(req, res) {
-        Empleado.findAll({
+        Rol.findAll({
             where: {
                 //name: req.params.name
 
                 cedula: {
-                    [Op.like]: `%${req.params.cedula}%`
+                    [Op.like]: `%${req.params.name}%`
                 }
 
             }
-        }).then(empleados => {
-            res.json(empleados);
+        }).then(Rols => {
+            res.json(Rols);
         });
     },
-
+    
 
     // INDEX /api/productos
-    showAll(req, res) {
+    show(req, res) {
         console.log('entro');
-        Empleado.findAll({ include: 'rol' }).then(empleados => {
-            res.json(empleados);
+        Rol.findAll().then(rols => {
+            res.json(rols);
         })
     },
 
 
     // READ /api/posts/:id
     showById(req, res) {
-        Empleado.findByPk(req.params.id).then(empleados => {
-            res.json(empleados);
+        Rol.findByPk(req.params.id).then(Rols => {
+            res.json(Rols);
         })
     },
 
     // // UPDATE /api/posts/:id
     update(req, res) {
 
-        Empleado.update({
-            nombre: req.body.nombre
+        Rol.update({
+            nombre: req.body.name
         }, {
             where: {
                 id: req.params.id
@@ -66,7 +66,7 @@ module.exports = {
 
     // DELETE /api/producto/:id
     delete(req, res) {
-        Empleado.destroy({
+        Rol.destroy({
             where: {
                 id: req.params.id
             }
