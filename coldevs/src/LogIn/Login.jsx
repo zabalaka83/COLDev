@@ -21,7 +21,7 @@ const responseGoogle = async (response) => {
     console.log('responseGoogle', response);
     if (response.tokenId) {
         try {history.push('/app/gmail')
-            cookie.save('token', response.tokenId);
+          /*   cookie.save('token', response.tokenId);
             const user = await fetch('http://localhost:3001/ventas', {
                 method: 'POST',
                 headers: {
@@ -41,7 +41,7 @@ const responseGoogle = async (response) => {
                 history.push('/admin')
                 return;
             }
-            history.push('/pendiente')
+            history.push('/pendiente') */
 
         } catch (error) {
             console.log('error', error);
