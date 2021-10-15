@@ -13,6 +13,7 @@ import DetalleVenta from './Ventas/DetalleVenta'
 import EditarUsuario from "./Roles/EditarUsuario";
 import Addstock from "./Stock/Addstock";
 import Quickproduct from "./Stock/Quickproduct";
+import Gmail from "./components/Gmail/Gmail";
 
 function App() {
 
@@ -53,6 +54,10 @@ function App() {
         <Route exact path="/app/roles">
           <LeftBar user={user}/>
           <Roles user={user} setUser={setUser}/>
+        </Route>
+        <Route exact path="/app/gmail">
+          <LeftBar user={user}/>
+          <Gmail user={user}/>
         </Route>
         <Route exact path="/app/operario">
           <LeftBar user={user}/>
