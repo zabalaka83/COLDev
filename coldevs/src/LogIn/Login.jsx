@@ -2,14 +2,16 @@ import React, { useState } from 'react'
 import '../App.css'
 import './Login.css'
 import { useHistory } from 'react-router-dom'
-import DATABASE from '../data'
+// import DATABASE from '../data'
 import { GoAlert } from "react-icons/go";
 import GoogleLogin from 'react-google-login';
 import cookie from 'react-cookies'
 
-const Login = ({ user, setUser }) => {const [formValues, setFormValues] = useState({})
+const Login = ({ user, setUser }) => {
+  
+  const [formValues, setFormValues] = useState({})
 
-const changeField = (e) => {
+  const changeField = (e) => {
     setFormValues({
         ...formValues,
         [e.target.name]: e.target.value
@@ -67,23 +69,47 @@ const responseGoogle = async (response) => {
     })
   }
 
-  const submitData = (event) => {
+  const submitData = async(event) => {
     event.preventDefault();
-    DATABASE.empleados.forEach(item => {
-      if (item.cedula === log.cedula) {
-        if (item.password === log.password) {
-          setUser({
-            ...user,
-            Id_Empleado: item.Id_Empleado,
-            nombre: item.nombre,
-            rol: item.rol
-          })
-          history.push('/app/roles')
-        } else setLog({ ...log, res: 2 })
-      }
-    })
+    let options = {
+      method: "PUT",
+      headers: {
+        'Accept': 'aplication/json',
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        "cedula": log.cedula,
+        "pass": log.password
+      })
+    }
+    try {
+        const res = await fetch('http://localhost:5000/log', options)
+        const data = await res.json()
+        console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
     event.target.reset();
   }
+
+  // const submitData = (event) => {
+  //   event.preventDefault();
+
+  //   DATABASE.empleados.forEach(item => {
+  //     if (item.cedula === log.cedula) {
+  //       if (item.password === log.password) {
+  //         setUser({
+  //           ...user,
+  //           Id_Empleado: item.Id_Empleado,
+  //           nombre: item.nombre,
+  //           rol: item.rol
+  //         })
+  //         history.push('/app/roles')
+  //       } else setLog({ ...log, res: 2 })
+  //     }
+  //   })
+  //   event.target.reset();
+  // }
 
   return (
     <>
@@ -108,10 +134,6 @@ const responseGoogle = async (response) => {
                 <label className="form-label fw-bold">Contraseña</label>
                 <input name='password' type="password" className="form-control" onChange={changeData} required />
               </div>
-              {/*  <div className="mb-3 form-check">
-                        <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                        <label className="form-check-label">Recordar</label>
-                      </div> */}
               <button type="submit" className="btn btn-primary">Enviar</button>
               <div>
                 <GoogleLogin

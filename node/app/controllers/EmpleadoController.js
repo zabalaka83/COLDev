@@ -1,5 +1,6 @@
 const {Empleado} = require('../models/index');
 const Sequelize = require('sequelize');
+const empleado = require('../models/empleado');
 const Op = Sequelize.Op;
 
 module.exports = {
@@ -46,6 +47,24 @@ module.exports = {
         Empleado.findByPk(req.params.id).then(empleados => {
             res.json(empleados);
         })
+    },
+
+    // READ /api/posts/:id
+    showByCedula(req, res) {
+        console.log(req.body)
+        Empleado.findOne({
+            where: {
+                cedula:  {
+                    [Op.eq]: req.body.cedula
+                }
+            }
+        }).then(empleado => {
+            if(empleado !== null ){
+                if(empleado.pass == req.body.pass){
+                    res.json(empleado)
+                } else res.json({error: "¡¡ Contraseña Incorecta !!"})
+            } else res.json({error:"¡¡ El Usuario No Existe !!"})
+        });
     },
 
     // // UPDATE /api/posts/:id

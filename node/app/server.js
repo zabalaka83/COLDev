@@ -4,7 +4,10 @@ var cors = require('cors')
 const { sequelize } = require('./models/index'); 
 
 // Setting
-const PORT = process.env.PORT || 5004;
+const PORT = process.env.PORT || 5000;
+// const whiteList = [
+//     'http://localhost:3000/'
+// ]
 
 // Middleware
 // Para poder rellenar el req.body

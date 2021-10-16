@@ -3,17 +3,16 @@ const router = express.Router();
 
 // Importar controladores
 const EmpleadoController = require('./controllers/EmpleadoController');
+const RolController = require('./controllers/RolController');
 
 // Empleado
 router.post('/', EmpleadoController.create);
 router.get('/getByName/:name', EmpleadoController.showByKeyWord);
 router.get('/empl', EmpleadoController.showAll);
+router.put('/log', EmpleadoController.showByCedula);
 router.get('/:id', EmpleadoController.showById);
 router.patch('/:id', EmpleadoController.update);
 router.delete('/:id', EmpleadoController.delete);
-
-// Importar controladores
-const RolController = require('./controllers/RolController');
 
 // Rol
 router.post('/rol', RolController.create);
