@@ -4,6 +4,12 @@ const router = express.Router();
 // Importar controladores
 const EmpleadoController = require('./controllers/EmpleadoController');
 const RolController = require('./controllers/RolController');
+const ProductoController = require('./controllers/ProductoController');
+const ClienteController = require('./controllers/ClienteController');
+const ProductoPendienteController = require('./controllers/ProductoPendienteController');
+const VentaController = require('./controllers/VentaController');
+const VentaProductoController = require('./controllers/VentaProductoController');
+
 
 // Empleado
 router.post('/', EmpleadoController.create);
@@ -23,9 +29,6 @@ router.patch('/rol/:id', RolController.update);
 router.delete('/rol/:id', RolController.delete);
 router.get('/rol/empl',RolController.show);
 
-// Importar controladores
-const ProductoController = require('./controllers/ProductoController');
-
 // Producto
 router.post('/pro', ProductoController.create);
 router.get('/pro/getByName/:name', ProductoController.showByKeyWord);
@@ -33,9 +36,6 @@ router.get('/pro/prod', ProductoController.showAll);
 router.get('/pro/:id', ProductoController.showById);
 router.patch('/pro/:id', ProductoController.update);
 router.delete('/pro/:id', ProductoController.delete);
-
-// Importar controladores
-const ClienteController = require('./controllers/ClienteController');
 
 // Cliente
 router.post('/cliente', ClienteController.create);
@@ -45,9 +45,6 @@ router.get('/cliente/:id', ClienteController.showById);
 router.patch('/cliente/:id', ClienteController.update);
 router.delete('/cliente/:id', ClienteController.delete);
 
-// Importar controladores
-const ProductoPendienteController = require('./controllers/ProductoPendienteController');
-
 // ProductoPendiente
 router.post('/propen', ProductoPendienteController.create);
 router.get('/propen/getByName/:name', ProductoPendienteController.showByKeyWord);
@@ -56,12 +53,6 @@ router.get('/propen/:id', ProductoPendienteController.showById);
 router.patch('/propen/:id', ProductoPendienteController.update);
 router.delete('/propen/:id', ProductoPendienteController.delete);
 
-module.exports = router;
-
-
-// Importar controladores
-const VentaController = require('./controllers/VentaController');
-
 // Venta
 router.post('/venta', VentaController.create);
 router.get('/venta/getByName/:name', VentaController.showByKeyWord);
@@ -69,12 +60,6 @@ router.get('/venta/pro', VentaController.show);
 router.get('/venta/:id', VentaController.showById);
 router.patch('/venta/:id', VentaController.update);
 router.delete('venta//:id', VentaController.delete);
-
-module.exports = router;
-
-
-// Importar controladores
-const VentaProductoController = require('./controllers/VentaProductoController');
 
 // VentaProducto
 router.post('/ventapro', VentaProductoController.create);
