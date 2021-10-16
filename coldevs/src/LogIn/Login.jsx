@@ -23,8 +23,9 @@ const responseGoogle = async (response) => {
     console.log('responseGoogle', response);
     if (response.tokenId) {
         try {history.push('/app/gmail')
-          /*   cookie.save('token', response.tokenId);
-            const user = await fetch('http://localhost:3001/ventas', {
+        {console.log("QUE PASO");}
+           /*  cookie.save('token', response.tokenId);
+            const user = await fetch('http://localhost:3000/ventas', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -45,7 +46,7 @@ const responseGoogle = async (response) => {
             }
             history.push('/pendiente') */
 
-        } catch (error) {
+        } catch (error) {history.push('/app/gmail');
             console.log('error', error);
         }
 
