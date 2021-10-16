@@ -9,6 +9,7 @@ const ClienteController = require('./controllers/ClienteController');
 const ProductoPendienteController = require('./controllers/ProductoPendienteController');
 const VentaController = require('./controllers/VentaController');
 const VentaProductoController = require('./controllers/VentaProductoController');
+const ClienteGmailController = require('./controllers/ClienteGmailController');
 
 
 // Empleado
@@ -53,13 +54,17 @@ router.get('/propen/:id', ProductoPendienteController.showById);
 router.patch('/propen/:id', ProductoPendienteController.update);
 router.delete('/propen/:id', ProductoPendienteController.delete);
 
+
 // Venta
 router.post('/venta', VentaController.create);
-router.get('/venta/getByName/:name', VentaController.showByKeyWord);
 router.get('/venta/pro', VentaController.show);
 router.get('/venta/:id', VentaController.showById);
 router.patch('/venta/:id', VentaController.update);
 router.delete('venta//:id', VentaController.delete);
+
+
+
+
 
 // VentaProducto
 router.post('/ventapro', VentaProductoController.create);
@@ -68,5 +73,12 @@ router.get('/ventapro/prod', VentaProductoController.show);
 router.get('/ventapro/:id', VentaProductoController.showById);
 router.patch('/ventapro/:id', VentaProductoController.update);
 router.delete('/ventapro/:id', VentaProductoController.delete);
+
+
+
+
+// VentaProducto
+router.post('/clientegm', ClienteGmailController.create);
+router.get('/clientegm/cliente', ClienteGmailController.show);
 
 module.exports = router;

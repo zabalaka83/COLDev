@@ -4,7 +4,7 @@ import cookie from 'react-cookies'
 const { OAuth2Client } = require('google-auth-library');
 
 
-const CLIENT_ID = '6834985795-3c36ugadrcvbagr9oh1mgns6s6raankn.apps.googleusercontent.com';
+const CLIENT_ID = '912968040117-gktc1nnh04mb98ig13aco6hthfei668m.apps.googleusercontent.com';
 
 const LoginGmail = ({ ...props }) => {
     //componente prop

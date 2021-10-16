@@ -56,7 +56,7 @@ function App() {
           <Roles user={user} setUser={setUser}/>
         </Route>
         <Route exact path="/app/gmail">
-          <LeftBar user={user}/>
+          
           <Gmail user={user}/>
         </Route>
         <Route exact path="/app/operario">

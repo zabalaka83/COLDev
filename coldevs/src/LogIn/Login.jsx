@@ -8,50 +8,45 @@ import GoogleLogin from 'react-google-login';
 import cookie from 'react-cookies'
 
 const Login = ({ user, setUser }) => {
-  
-  const [formValues, setFormValues] = useState({})
 
-  const changeField = (e) => {
-    setFormValues({
-        ...formValues,
-        [e.target.name]: e.target.value
-    })
-}
-
-
-const responseGoogle = async (response) => {
+  const responseGoogle = async (response) => {
     console.log('responseGoogle', response);
     if (response.tokenId) {
-        try {history.push('/app/gmail')
-        {console.log("QUE PASO");}
-           /*  cookie.save('token', response.tokenId);
-            const user = await fetch('http://localhost:3000/ventas', {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    name: response.profileObj.name,
-                    lastname: response.profileObj.familyName,
-                    email: response.profileObj.email
-                })
-            });
-
-            const content = await user.json();
+      try {
+       
+        cookie.save('token', response.tokenId);
+        console.log('token',response.tokenId);
+        
+        const user = await fetch('http://localhost:5000/clientegm', {
+          
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: response.profileObj.name,
+            email: response.profileObj.email
             
-            if (content.user.Roles[0].name == 'admin') {
-                history.push('/admin')
-                return;
-            }
-            history.push('/pendiente') */
+          })
+        });
+        { console.log("QUE PASO"); }
 
-        } catch (error) {history.push('/app/gmail');
-            console.log('error', error);
+        const content = await user.json();
+        history.push('/app/gmail');
+
+        /* if (content.user.Roles[0].name == 'admin') {
+            history.push('/admin')
+            return;
         }
+        history.push('/pendiente')  */
+
+      } catch (error) {
+        console.log('error', error);
+      }
 
     }
-}
+  }
 
 
 
@@ -71,7 +66,7 @@ const responseGoogle = async (response) => {
     })
   }
 
-  const submitData = async(event) => {
+  const submitData = async (event) => {
     event.preventDefault();
     let options = {
       method: "PUT",
@@ -85,23 +80,23 @@ const responseGoogle = async (response) => {
       })
     }
     try {
-        const res = await fetch('http://localhost:5000/log', options)
-        const data = await res.json()
-        if(data.error !== ''){
-          setLog({ ...log, res: 2, error: data.error })
-        } else {
-            setUser({
-              ...user,
-              Id_Empleado: data.empleado.id,
-              nombre: data.empleado.name +' '+ data.empleado.apellido,
-              rol: data.empleado.rol_id
-            })
-            
-            history.push('/app/roles')
-        }
+      const res = await fetch('http://localhost:5000/log', options)
+      const data = await res.json()
+      if (data.error !== '') {
+        setLog({ ...log, res: 2, error: data.error })
+      } else {
+        setUser({
+          ...user,
+          Id_Empleado: data.empleado.id,
+          nombre: data.empleado.name + ' ' + data.empleado.apellido,
+          rol: data.empleado.rol_id
+        })
+
+        history.push('/app/roles')
+      }
 
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
     event.target.reset();
   }
@@ -146,9 +141,14 @@ const responseGoogle = async (response) => {
             <input name='password' type="password" className="form-control" onChange={changeData} required />
           </div>
           <button type="submit" className="btn btn-primary">Enviar</button>
+          <br />
+          <br />
+
+          <div className="form-text">--Registrese como cliente--</div>
+          
           <div>
             <GoogleLogin
-              clientId="6834985795-3c36ugadrcvbagr9oh1mgns6s6raankn.apps.googleusercontent.com"
+              clientId="912968040117-gktc1nnh04mb98ig13aco6hthfei668m.apps.googleusercontent.com"
               buttonText="Login"
               onSuccess={responseGoogle}
               onFailure={responseGoogle}
