@@ -14,7 +14,7 @@ const Stock = ({ user }) => {
 
     const [products, setProducts] = useState([])
 
-    useEffect(async () => {
+    const getProducts = async () => {
         try {
             const res = await fetch('http://localhost:5000/pro/prod')
             const data = await res.json()
@@ -22,11 +22,16 @@ const Stock = ({ user }) => {
         } catch (error) {
             console.log(error);
         }
+    }
+
+    useEffect(() => {
+        getProducts()
     }, [])
 
     const history = useHistory();// id Nombre precio cantidad
 
     const addProduct = () => {
+        //console.log(e)
         history.push('/app/addstock');
     }
     const quickProduct = () => {

@@ -14,12 +14,12 @@ const Addstock = ({ user }) => {
                     history.push('/denegado') :
                     <div className="main">
                         <div>
-                            <div class="hstack gap-3">
+                            <div className="hstack gap-3">
                                 <h1>Adiccionar</h1><br/>
-                                <input class="form-control me-auto" type="text" placeholder="Cantidad de producto a sumar al Stock:" aria-label="Add your item here..." />            
-                                <button type="button" class="btn btn-secondary">Submit</button>
-                                <div class="vr"></div>
-                                <button type="button" class="btn btn-outline-danger">Reset</button>
+                                <input className="form-control me-auto" type="text" placeholder="Cantidad de producto a sumar al Stock:" aria-label="Add your item here..." />            
+                                <button type="button" className="btn btn-secondary">Submit</button>
+                                <div className="vr"></div>
+                                <button type="button" className="btn btn-outline-danger">Reset</button>
                             </div>
                            {/* 
                             <table className="table">
