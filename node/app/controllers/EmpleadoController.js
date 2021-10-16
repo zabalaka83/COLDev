@@ -61,7 +61,7 @@ module.exports = {
         }).then(empleado => {
             if(empleado !== null ){
                 if(empleado.pass == req.body.pass){
-                    res.json(empleado)
+                    res.json({error: '', empleado: empleado})
                 } else res.json({error: "¡¡ Contraseña Incorecta !!"})
             } else res.json({error:"¡¡ El Usuario No Existe !!"})
         });

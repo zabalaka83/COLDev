@@ -58,7 +58,8 @@ const responseGoogle = async (response) => {
   const [log, setLog] = useState({
     cedula: '',
     password: '',
-    res: 0
+    res: 0,
+    error: ''
   })
 
   const changeData = (event) => {
@@ -85,7 +86,19 @@ const responseGoogle = async (response) => {
     try {
         const res = await fetch('http://localhost:5000/log', options)
         const data = await res.json()
-        console.log(data);
+        if(data.error !== ''){
+          setLog({ ...log, res: 2, error: data.error })
+        } else {
+            setUser({
+              ...user,
+              Id_Empleado: data.empleado.id,
+              nombre: data.empleado.name +' '+ data.empleado.apellido,
+              rol: data.empleado.rol_id
+            })
+            
+            history.push('/app/roles')
+        }
+
     } catch (error) {
         console.log(error);
     }
@@ -113,40 +126,36 @@ const responseGoogle = async (response) => {
 
   return (
     <>
-      {
-        user.Id_Empleado !== 0 ?
-          history.push('/app/roles') :
-          <div className='container-fluid log shadow p-3 mb-5 border'>
-            <h1 className='text-center fw-bold'>Log In</h1>
-            {
-              log.res === 2 ?
-                <div className="alert alert-danger text-center" role="alert">
-                  <GoAlert />  ¡¡ Contraseña Incorrecta !!
-                </div> : <></>
-            }
-            <form className='' onSubmit={submitData}>
-              <div className="mb-3">
-                <label className="form-label fw-bold">Cedula</label>
-                <input name='cedula' type="text" className="form-control" onChange={changeData} required />
-                <div className="form-text">Por favor sin puntos o comas.</div>
-              </div>
-              <div className="mb-3">
-                <label className="form-label fw-bold">Contraseña</label>
-                <input name='password' type="password" className="form-control" onChange={changeData} required />
-              </div>
-              <button type="submit" className="btn btn-primary">Enviar</button>
-              <div>
-                <GoogleLogin
-                  clientId="6834985795-3c36ugadrcvbagr9oh1mgns6s6raankn.apps.googleusercontent.com"
-                  buttonText="Login"
-                  onSuccess={responseGoogle}
-                  onFailure={responseGoogle}
-                  cookiePolicy={'single_host_origin'}
-                />
-              </div>
-            </form>
+      <div className='container-fluid log shadow p-3 mb-5 border'>
+        <h1 className='text-center fw-bold'>Log In</h1>
+        {
+          log.res === 2 ?
+            <div className="alert alert-danger text-center" role="alert">
+              <GoAlert />  {log.error}
+            </div> : <></>
+        }
+        <form className='' onSubmit={submitData}>
+          <div className="mb-3">
+            <label className="form-label fw-bold">Cedula</label>
+            <input name='cedula' type="text" className="form-control" onChange={changeData} required />
+            <div className="form-text">Por favor sin puntos o comas.</div>
           </div>
-      }
+          <div className="mb-3">
+            <label className="form-label fw-bold">Contraseña</label>
+            <input name='password' type="password" className="form-control" onChange={changeData} required />
+          </div>
+          <button type="submit" className="btn btn-primary">Enviar</button>
+          <div>
+            <GoogleLogin
+              clientId="6834985795-3c36ugadrcvbagr9oh1mgns6s6raankn.apps.googleusercontent.com"
+              buttonText="Login"
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
+              cookiePolicy={'single_host_origin'}
+            />
+          </div>
+        </form>
+      </div>
     </>
   )
 }
